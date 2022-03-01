@@ -12,3 +12,5 @@ try:
   print(f"Number of users deleted: {counter}")
 except Exception as ex:
   print(ex)
+finally:
+  db.close()  

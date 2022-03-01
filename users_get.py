@@ -16,6 +16,8 @@ try:
   print(users)
 except Exception as ex:
   print(ex)
+finally:
+  db.close()  
 
 
 

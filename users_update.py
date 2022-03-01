@@ -12,8 +12,6 @@ try:
     SET user_name = :user_name
     WHERE user_id = :user_id
   """, user).rowcount
-
-
   # counter = db.execute("""
   #   UPDATE users
   #   SET user_name = ?
@@ -23,6 +21,8 @@ try:
   print(f"Number of users updated: {counter}")
 except Exception as ex:
   print(ex)
+finally:
+  db.close()  
 
 
 

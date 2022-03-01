@@ -22,4 +22,5 @@ except Exception as ex:
   print(type(ex))
   if "user_email" in str(ex): 
     print("Email already exists")
-
+finally:
+  db.close()
