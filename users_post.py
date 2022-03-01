@@ -2,7 +2,7 @@ import sqlite3
 import uuid
 
 user_id = str(uuid.uuid4())
-user_name = "xxx"
+user_name = "b"
 
 user = {
   "user_id" : user_id,
