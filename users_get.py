@@ -9,10 +9,13 @@ def dict_factory(cursor, row):
   return d
 
 ##############################
-db = sqlite3.connect("database.sqlite")
-db.row_factory = dict_factory
-users = json.dumps(db.execute("SELECT * FROM users").fetchall())
-print(users)
+try:
+  db = sqlite3.connect("database.sqlite")
+  db.row_factory = dict_factory
+  users = json.dumps(db.execute("SELECT * FROM users").fetchall())
+  print(users)
+except Exception as ex:
+  print(ex)
 
 
 
