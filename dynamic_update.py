@@ -19,13 +19,18 @@ if user_email:
 
 set_parts = ",".join(set_parts)
 
+# INSERT, UPDATE, DELETE you must commit
+
 db.execute(f"""
   UPDATE users
   SET {set_parts} 
   WHERE user_id = :user_id
 """, new_item)
 
+# Save the changes to the db
+db.commit()
 
-
+users = db.execute("SELECT * FROM users").fetchall()
+print(users)
 
 
