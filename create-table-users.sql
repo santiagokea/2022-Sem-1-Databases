@@ -6,3 +6,5 @@ CREATE TABLE users(
   user_email  TEXT UNIQUE NOT NULL,
   PRIMARY KEY(user_id)
 ) WITHOUT ROWID;
+
+CREATE INDEX idx_user_name ON users(user_name);
