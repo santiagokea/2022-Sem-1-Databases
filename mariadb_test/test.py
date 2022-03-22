@@ -11,6 +11,8 @@ db_config = {
 
 #db.sqlite3.connect
 db_conn = mysql.connector.connect(**db_config)
+# Without dictionary = True it returns a multi-dimensional array
+# [[1, "a", "@a"], [2, "b", "@b"]]
 db = db_conn.cursor(dictionary=True)
 # print("*****")
 print(dir(db))
